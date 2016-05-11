@@ -1,36 +1,26 @@
-float cloudSpeedX;
-float cloudSpeedY;
-float cloudWidth = 50;
-float cloudHeight = 50;
-float cloudX = 50;
-float cloudY = 50;
-float cloudSize = random(-10,100);
+int cloudX;
 int planeSize = 15;
 int swap = 0;
-
 float planeX = 20;
-float planeY = 50;
+float planeY = 5;
 void setup()
 {
   size (500,500);
+  cloudX=0;
 }
 
 void draw()
 {
-   background(0,255,0);
-   rect(0,0,500,325);
-   fill(0);
+  background(0,255,0);
+   rect(0,0,499,325);
   cloudX++;
-    if(cloudX <=350);
-  {
-    ellipse(cloudX,cloudY,cloudSize,cloudSize);
-  cloudX++;
-  }
-    if(planeX>= width- planeSize/2)
+cloud();
+  strokeWeight(2);
+   if(planeX>= width- planeSize/2)
     {
     swap=1;
   }
-  if(planeX == planeSize/2)
+  if(planeX == planeSize/2) //plane will travel back and forth
   {
     swap=0;
   }
@@ -42,27 +32,17 @@ void draw()
       {
         planeX--;
   }
+  fill(18,255,201);
   rect(planeX,50,planeSize+30,planeSize);
-  rect(planeX+15,36.5,planeSize-5,planeSize+30);
+  rect(planeX+15,36.5,planeSize-5,planeSize+30); // drawing parts of the plane
   fill(0,55,255);
-  
-  
   
   if (key == ' ')
      {
-       rect(50,425,10,10);
+       rect(50,425,10,10); //spawn cube work on person later
       
      }
    
 }
-     
-       
-         
-       
-  
-
-
-
-
 
 
