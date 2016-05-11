@@ -2,19 +2,20 @@ int cloudX;
 int planeSize = 15;
 int swap = 0;
 float planeX = 20;
-float planeY = 5;
+float planeY = 5; //variables
 void setup()
 {
   size (500,500);
-  cloudX=0;
+
 }
 
 void draw()
 {
+  
   background(0,255,0);
    rect(0,0,499,325);
   cloudX++;
-cloud();
+cloud();  // calling cloud method
   strokeWeight(2);
    if(planeX>= width- planeSize/2)
     {
