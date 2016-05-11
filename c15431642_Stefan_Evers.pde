@@ -16,7 +16,7 @@ void draw()
    rect(0,0,499,325);
   cloudX++;
 cloud();  // calling cloud method
-  strokeWeight(2);
+  strokeWeight(3);
    if(planeX>= width- planeSize/2)
     {
     swap=1;
